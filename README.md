@@ -1,16 +1,12 @@
-# ShopCompare
+# Ecommerence-website
 
-MERN stack app that track product price
-
-
-
+Ecommerence build in MERN stack
 
 Techology used
 React
 Node
 Express
 mongodb
-
 
 Frontend dependencies
 
