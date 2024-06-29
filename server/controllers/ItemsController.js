@@ -7,15 +7,15 @@ const mongoose = require('mongoose');
 
 // getItems, get all items
 const getItems = async(req, res) => {
-    const item = await Item.find({});
-    res.status(200).json(item);
+    const items = await Item.find({}).sort({createdAt: -1});
+    res.status(200).json(items);
 }
 
 // Make a new item
 const makeItem = async(req, res) => {
-    const {name, price} = req.body;
+    const {name, price, description, stockQuantity, image} = req.body;
     try{
-        const item = await Item.create({name, price})
+        const item = await Item.create({name, price, description, stockQuantity, image})
         res.status(200).json(item)
     }
     catch(error){
