@@ -39,6 +39,9 @@ const Navbar = () => {
                             <li>
                                 <NavItem destination="/Checkout">Checkout</NavItem>
                             </li>
+                            <li>
+                                <NavItem destination="/account">Account (login / signup)</NavItem>
+                            </li>
                         </ul>
                     </div>
                 </div>

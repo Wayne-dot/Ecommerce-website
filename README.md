@@ -23,6 +23,7 @@ For the frontend package.json, make sure
 
 TODO LIST
 
+- Complete CRUD operation
 - React, hooks, Context API, Form Handling, Performance Optimization (Techniques like code splitting, lazy loading, memoization, and understanding React's reconciliation process)
 - Redux
 - JWT auth/two factor auth
@@ -35,3 +36,5 @@ TODO LIST
 - Features to add
   - Image storage
   - payment
+  - webpage for each title
+- Recomendation algorthim
