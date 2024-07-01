@@ -4,6 +4,7 @@ require('dotenv').config();
 const express = require('express');
 const mongoose = require('mongoose');
 const ItemRoutes = require('./routes/ItemRoutes');
+const UserRoutes = require('./routes/UserRoutes');
 
 // express app
 const app = express();
@@ -19,6 +20,8 @@ app.use((req, res, next) => {
 // routes
 app.use('/api', ItemRoutes);
 
+app.use('/account', UserRoutes);
+
 // Connect to MongoDB
 mongoose.connect(process.env.MONGO_URL)
     .then(() => {
@@ -27,7 +30,6 @@ mongoose.connect(process.env.MONGO_URL)
             console.log(`Connect to MongoDB and listening on port ${process.env.PORT}`);
         })
     })
-
 
     .catch((error) => {
         console.log(error);

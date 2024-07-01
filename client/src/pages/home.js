@@ -23,23 +23,6 @@ const Home = () => {
         fetchData();
     }, []); // Empty dependency array to run once on mount
     
-
-    const chunkArray = (ObjecItems, size) => {
-        const chunks = [];
-        let array = Object.values(ObjecItems);
-        let chunk;
-        
-        for(let i = 0 ; i < array.length ; i+=size){
-            chunk = array.slice(i, i + size);
-            chunks.push(chunk);
-        }
-        return chunks;
-    }
-
-    const ArrayObjectItems = items ? Object.values(items) : [];
-    const chunks = chunkArray(ArrayObjectItems, 4);
-    console.log(chunks);
-
     return(
         <div className="Home">
 

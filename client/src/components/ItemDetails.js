@@ -4,6 +4,7 @@ import React from "react";
 const ItemDetails = ({item}) => {
 
     const Item = ({title, image, price}) => {
+        return (
         <div class="relative group">
         <div class="overflow-hidden aspect-w-1 aspect-h-1">
             <img class="object-cover w-full h-full transition-all duration-300 group-hover:scale-125" src={image} alt="" />
@@ -53,15 +54,16 @@ const ItemDetails = ({item}) => {
             </div>
         </div>
         </div>
+        );
     }
     
     return(
         <div className="ItemDetails">
-            <img src={item.image} alt="a desk"></img>
-            <h4>Name: {item.name}</h4>
+            {/* <img src={item.image} alt=""></img>
+            <h4>{item.name}</h4>
             <p>${item.price}</p>
             <p>description: {item.description}</p>
-            <p>Quantity: {item.stockQuantity}</p>
+            <p>Quantity: {item.stockQuantity}</p> */}
 
 
             <Item title={item.name} image={item.image} price={item.price}/>
