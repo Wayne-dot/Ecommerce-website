@@ -3,10 +3,14 @@ import Account from './pages/Account';
 import Checkout from './pages/Checkout';
 import About from './pages/About';
 import Architecture from './pages/Architecture';
+import Signup from './pages/Signup';
+import Login from './pages/Login';
+
 
 import Navbar from './components/Narbar';
 // import './index.css'
 import {BrowserRouter, Routes, Route} from 'react-router-dom'
+
 
 function App() {
   return (
@@ -23,6 +27,16 @@ function App() {
             <Route 
               path="/account"
               element = {<Account/>}
+            />
+
+            <Route 
+              path="/account/signup"
+              element = {<Signup/>}
+            />
+
+            <Route 
+              path="/account/login"
+              element = {<Login/>}
             />
 
             <Route 

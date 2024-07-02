@@ -44,8 +44,9 @@ TODO LIST
 - JWT auth/two factor auth
 - Next js
 - Testing, for CI/CD
-- Docker
-- AWS, CI CD pipeline
+- Docker, Kubernetes
+- AWS, terraform
+- Github acton, CI CD pipeline
 - Typescript?, learn by challenge: https://github.com/type-challenges/type-challenges
 - Tailwind CSS?
 - Recomendation algorthim
