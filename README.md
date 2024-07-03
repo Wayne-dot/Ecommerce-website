@@ -8,6 +8,12 @@ Node
 Express
 Mongodb
 
+
+To Run this project
+```
+git clone https://github.com/Wayne-dot/Ecommerce-website.git
+```
+
 Frontend dependencies
 
 Backend dependencies

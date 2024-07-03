@@ -1,7 +1,7 @@
 import React from "react";
 
 
-const ItemDetails = ({item}) => {
+const ItemDetails = ({item, key}) => {
 
     const Item = ({title, image, price}) => {
         return (
@@ -15,7 +15,8 @@ const ItemDetails = ({item}) => {
         <div class="flex items-start justify-between mt-4 space-x-4">
             <div>
                 <h3 class="text-xs font-bold text-gray-900 sm:text-sm md:text-base">
-                    <a href="#" title="">
+                    {/* link to product page */}
+                    <a href="/account" title="">
                         {title}
                         <span class="absolute inset-0" aria-hidden="true"></span>
                     </a>
@@ -64,7 +65,6 @@ const ItemDetails = ({item}) => {
             <p>${item.price}</p>
             <p>description: {item.description}</p>
             <p>Quantity: {item.stockQuantity}</p> */}
-
 
             <Item title={item.name} image={item.image} price={item.price}/>
 
