@@ -4,8 +4,14 @@ import '../assets/custom.css';
 import { SlBasket } from "react-icons/sl";
 import { FaSearch } from "react-icons/fa";
 import { CiUser } from "react-icons/ci";
+import { useLogout } from '../hooks/useLogout';
+import { useAuthContext } from '../hooks/userAuthContext';
 
 const Navbar = () => {
+
+    const {user} = useAuthContext();
+    const {Logout} = useLogout()
+
     const NavItem = ({ destination, children }) => {
         return (
             <div className='p-0 text-black transition duration-200 hover:text-neutral-200 hover:ease-in-out focus:text-neutral-200 active:text-black/80 motion-reduce:transition-none lg:px-2'>
@@ -17,6 +23,11 @@ const Navbar = () => {
     const toggleTheme = () => {
         // Theme toggle logic here
     };
+
+
+    const handleClick = () => {
+        Logout()
+    }
 
     return (
         <header>
@@ -39,12 +50,24 @@ const Navbar = () => {
                             <li>
                                 <NavItem destination="/Checkout">Checkout</NavItem>
                             </li>
-                            <li>
-                                <NavItem destination="/account/login">Login</NavItem>
-                            </li>
-                            <li>
-                                <NavItem destination="/account/signup">Signup</NavItem>
-                            </li>
+                            {!user && (
+                                <div>
+                                    <li>
+                                        <NavItem destination="/account/login">Login</NavItem>
+                                    </li>
+                                    <li>
+                                        <NavItem destination="/account/signup">Signup</NavItem>
+                                    </li>
+                                </div>
+                            )}
+
+                            {user && (
+                                <div>
+                                    <span>{user.email}</span>
+                                    <button onClick={handleClick}>Log out</button>
+                                </div>
+                            )}
+                            
                         </ul>
                     </div>
                 </div>
