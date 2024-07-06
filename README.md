@@ -9,7 +9,7 @@ Express
 Mongodb
 
 
-To Run this project
+## Getting Started
 ```
 git clone https://github.com/Wayne-dot/Ecommerce-website.git
 ```
