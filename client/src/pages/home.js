@@ -1,27 +1,40 @@
 import { useEffect, useState } from "react";
 import ItemDetails from "../components/ItemDetails";
 import ImagePath from '../assets/Page_Images/fasion1.jpg'
+import { useAuthContext } from "../hooks/userAuthContext";
 
 const Home = () => {
 
     const [items, setitems] = useState(null);
+    const {user, dispatch} = useAuthContext()
+
+    const token = user?.token
 
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const response = await fetch('/api/');
+                const response = await fetch('/api/', {
+                    headers: {
+                        'Authorization': `Bearer ${token}`
+                    }
+                });
                 if (response.ok) {
                     const json = await response.json();
                     setitems(json)
+                    
                 }
                 
             } catch (error) {
                 console.error('Fetch error:', error);
             }
         };
-
-        fetchData();
-    }, []); // Empty dependency array to run once on mount
+        
+        if(user){
+            fetchData();
+        }
+    }, [dispatch, user]); // Empty dependency array to run once on mount
+    
+    // useEffect only trigger if the user change
     
     return(
         <div className="Home">

@@ -4,15 +4,20 @@ import { useAuthContext } from "./userAuthContext";
 export const useSingup = () => {
     const [error, setError] = useState(null)
     const [loading, setloading] = useState(null)
-    const {dispatch} = useAuthContext()
+    const {user, dispatch} = useAuthContext()
     
     const signup = async(email, password) => {
         setloading(true)
         setError(null)
 
+        const token = user?.token
+
         const response = await fetch('/account/signup', {
             method: 'POST',
-            headers: {'Content-Type': 'application/json'},
+            headers: {
+                'Content-Type': 'application/json',
+                'Authorization': `Bearer ${token}`
+            },
             body: JSON.stringify({email, password})
         })
 

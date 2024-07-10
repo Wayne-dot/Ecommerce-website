@@ -1,10 +1,12 @@
-import Home from './pages/Home';
+import Home from './pages/home';
 import Account from './pages/Account';
 import Checkout from './pages/Checkout';
 import About from './pages/About';
 import Architecture from './pages/Architecture';
 import Signup from './pages/Signup';
 import Login from './pages/Login';
+import ForgetPassword from './pages/ForgetPassword';
+import Product from './pages/Product';
 
 
 import Navbar from './components/Narbar';
@@ -25,6 +27,11 @@ function App() {
             />
 
             <Route 
+              path="/:id"
+              element = {<Product/>}
+            />
+
+            <Route 
               path="/account"
               element = {<Account/>}
             />
@@ -37,6 +44,11 @@ function App() {
             <Route 
               path="/account/login"
               element = {<Login/>}
+            />
+
+            <Route 
+              path="/account/ForgetPassword"
+              element = {<ForgetPassword/>}
             />
 
             <Route 

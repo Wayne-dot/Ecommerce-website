@@ -1,18 +1,25 @@
 import { useState } from "react";
 import { useAuthContext } from "./userAuthContext";
+import { useNavigate } from 'react-router-dom';
 
 export const useLogin = () => {
     const [error, setError] = useState(null)
     const [loading, setloading] = useState(null)
-    const {dispatch} = useAuthContext()
+    const {user, dispatch} = useAuthContext()
+    const navigate = useNavigate();
     
     const login = async(email, password) => {
         setloading(true)
         setError(null)
 
+        const token = user?.token
+
         const response = await fetch('/account/login', {
             method: 'POST',
-            headers: {'Content-Type': 'application/json'},
+            headers: {
+                'Content-Type': 'application/json',
+                'Authorization': `Bearer ${token}`
+            },
             body: JSON.stringify({email, password})
         })
 
@@ -30,6 +37,8 @@ export const useLogin = () => {
             dispatch({type: 'LOGIN', payload:json})
 
             setloading(false)
+            navigate('/')
+            
         }
         
     }

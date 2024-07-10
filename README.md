@@ -30,19 +30,17 @@ Backend dependencies
 For the frontend package.json, make sure
 "proxy": "http://localhost:4000"
 
-Currently workingo on:
+Complete feature:
 - JWT web token, user authentication
 
-Complete feature:
-
+Currently workingo on:
+- webpage for each products
 
 TODO LIST
 
 - Features to add
-  - Authentication
   - Image storage
   - payment
-  - webpage for each products
   - Google login page
 - Complete CRUD operation
 - React, hooks, Context API, Form Handling, Performance Optimization (Techniques like code splitting, lazy loading, memoization, and understanding React's reconciliation process)
@@ -54,5 +52,4 @@ TODO LIST
 - AWS, terraform
 - Github acton, CI CD pipeline
 - Typescript?, learn by challenge: https://github.com/type-challenges/type-challenges
-- Tailwind CSS?
 - Recomendation algorthim
