@@ -31,10 +31,13 @@ For the frontend package.json, make sure
 "proxy": "http://localhost:4000"
 
 Complete feature:
+
 - JWT web token, user authentication
+- Third party API (Stripe)
 
 Currently workingo on:
-- webpage for each products
+
+- webpage for each products, create product
 
 TODO LIST
 
@@ -42,10 +45,17 @@ TODO LIST
   - Image storage
   - payment
   - Google login page
-- Complete CRUD operation
+  - Admin panel, stats about the product page for the business owner
+  - email customer for discount
+  - Checkout, cost calculation, include shipping cost
+  - Fedex, shipping cost
+  - sales tax according to state
+- Complete CRUD operation, certain user can change the price
+- Striple API, currency change according to location
+- 
 - React, hooks, Context API, Form Handling, Performance Optimization (Techniques like code splitting, lazy loading, memoization, and understanding React's reconciliation process)
 - Redux
-- JWT auth/two factor auth
+- two factor authentication
 - Next js
 - Testing, for CI/CD
 - Docker, Kubernetes
@@ -53,3 +63,5 @@ TODO LIST
 - Github acton, CI CD pipeline
 - Typescript?, learn by challenge: https://github.com/type-challenges/type-challenges
 - Recomendation algorthim
+- Web page transition animation
+- Sequelize, PostgreSQL

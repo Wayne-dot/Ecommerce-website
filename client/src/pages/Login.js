@@ -97,7 +97,7 @@ const Login = () => {
 
                     <div class="mt-4 flex items-center justify-between">
                         <span class="border-b w-1/5 lg:w-1/4"></span>
-                        <a href="#" class="text-xs text-center text-gray-500 uppercase">or login with email</a>
+                            <p class="text-sm text-center text-gray-900 uppercase">or login with email</p>
                         <span class="border-b w-1/5 lg:w-1/4"></span>
                     </div>
 
@@ -134,7 +134,7 @@ const Login = () => {
 
                     <div class="mt-4 flex items-center justify-between">
                         <span class="border-b w-1/5 md:w-1/4"></span>
-                            <Link to="/account/signup" class="text-xs text-gray-500 uppercase">Sign Up</Link>
+                            <Link to="/account/signup" class="text-sm text-center text-gray-900 uppercase">Sign Up</Link>
                         <span class="border-b w-1/5 md:w-1/4"></span>
                     </div>
                     

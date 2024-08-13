@@ -12,6 +12,7 @@ import Product from './pages/Product';
 import Navbar from './components/Narbar';
 // import './index.css'
 import {BrowserRouter, Routes, Route} from 'react-router-dom'
+import Create from './pages/Create';
 
 
 function App() {
@@ -25,9 +26,10 @@ function App() {
               path="/"
               element = {<Home/>}
             />
-
+            
+            {/* Dynamic route */}
             <Route 
-              path="/:id"
+              path="/product/:id"
               element = {<Product/>}
             />
 
@@ -64,6 +66,11 @@ function App() {
             <Route 
               path="/architecture"
               element = {<Architecture/>}
+            />
+
+            <Route 
+              path = "/create"
+              element = {<Create/>}
             />
 
           </Routes>

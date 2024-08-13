@@ -14,24 +14,6 @@ const Signup = () => {
     }
 
     return (
-        // <form className="signup" onSubmit={handleSubmit}>
-        //     <h3>Signup</h3>
-        //     <label>Email:</label>
-        //     <input 
-        //         type="email"
-        //         onChange={(e) => setEmail(e.target.value)}
-        //         value = {email}
-        //     />
-        //     <label>Password:</label>
-        //     <input 
-        //         type="password"
-        //         onChange={(e) => setpassword(e.target.value)}
-        //         value = {password}
-        //     />
-
-        //     <button disabled={isloading}>Signup</button>
-        //     {error && <div className="error">{error}</div>}
-        // </form>
         <div class="py-16">
             <div class="flex bg-white rounded-lg shadow-lg overflow-hidden mx-auto max-w-sm lg:max-w-2xl mt-8">
                 <div class="w-full p-8">
@@ -115,7 +97,7 @@ const Signup = () => {
 
                     <div class="mt-4 flex items-center justify-between">
                         <span class="border-b w-1/5 lg:w-1/4"></span>
-                        <a href="#" class="text-xs text-center text-gray-500 uppercase">or sign up with email</a>
+                        <p class="text-sm text-center text-gray-900 uppercase">or sign up with email</p>
                         <span class="border-b w-1/5 lg:w-1/4"></span>
                     </div>
 

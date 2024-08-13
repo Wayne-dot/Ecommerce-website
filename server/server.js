@@ -5,6 +5,7 @@ const express = require('express');
 const mongoose = require('mongoose');
 const ItemRoutes = require('./routes/ItemRoutes');
 const UserRoutes = require('./routes/UserRoutes');
+const SchemaRoute = require('./routes/SchemaRoute')
 
 // express app
 const app = express();
@@ -21,6 +22,8 @@ app.use((req, res, next) => {
 app.use('/api', ItemRoutes);
 
 app.use('/account', UserRoutes);
+
+app.use('/schema', SchemaRoute)
 
 // Connect to MongoDB
 mongoose.connect(process.env.MONGO_URL)

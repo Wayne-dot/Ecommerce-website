@@ -3,6 +3,7 @@ const requireAuth = require('../middleware/requireAuth')
 const {
     getItems,
     makeItem,
+    getOneItem,
 } = require('../controllers/ItemsController');
 
 
@@ -13,6 +14,8 @@ const router = express.Router();
 router.use(requireAuth)
 
 router.get('/', getItems);
+
+router.get('/:id', getOneItem);
 
 router.post('/', makeItem)
 

@@ -12,7 +12,7 @@ const ItemSchema = new Schema({
         require: true,
     },
     description: {
-        type: String,
+        type: [String],
         require: true,
     },
     stockQuantity: {
@@ -20,12 +20,37 @@ const ItemSchema = new Schema({
         require: true,
     },
     image: {
-        type: String,
+        type: [String],
         require: true,
     }
     // tags
-}, {timestamps: true})
+}, {
+    timestamps: true,
+    discriminatorKey: 'category',
+    collection: 'products'
+})
 
 
+const WatchSchema = new Schema({
+    brand: {
+        type: String,
+        require: true,
+    },
+    item_length_in_Inches: {
+        type: Number,
+        require: true
+    },
+    color: {
+        type: String,
+        require: true,
+    },
+    Model_number: {
+        type: Number,
+        require: true
+    }
+})
+
+const Watches = ItemSchema.discriminator('Watches', WatchSchema)
 
 module.exports = mongoose.model('Item', ItemSchema)
+// module.exports = {Watches}
